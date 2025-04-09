@@ -9,16 +9,22 @@ const connect = function() {
 
   conn.setEncoding("utf8");
 
-  conn.on('connect', () => {
+  conn.on("connect", () => {
     console.log("Successfully connected to game server.");
-  });
-
-  conn.on('connect', () => {
-    console.log("Name: MP");
-  });
   
+
+    // conn.write("Move: Up");
+
+    // conn.write("Move: Down");
+
+    // conn.write("Move: Left");
+
+    // conn.write("Move: RIght");
+
+  });
   conn.on('data', (data) => {
     console.log('Server says:',data);
+   
   
   });
 
