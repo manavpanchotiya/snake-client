@@ -19,7 +19,7 @@ const setupInput = (conn) => {
 };
 
 const userInput = function(key) {
-  console.log("key press:", key);
+  //console.log("key press:", key);
   if (key === "\u0003") {
     process.exit();
   }
@@ -38,6 +38,10 @@ const userInput = function(key) {
 
   if (key === "d") {
     connection.write("Move: right");
+  }
+
+  if (key === "m") {
+    connection.write("Say: CIAO");
   }
   return key;
 };
